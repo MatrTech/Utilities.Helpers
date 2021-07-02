@@ -27,7 +27,7 @@ namespace ActivatorHelperTests
         [TestMethod]
         public void CreateInstance_WithParametersButNotProvided_ShouldThrowException()
         {
-            Func<TestClassWithParameters> func = () => ActivatorHelper.CreateInstance<TestClassWithParameters>();
+            Func<TestClassWithParameters?> func = () => ActivatorHelper.CreateInstance<TestClassWithParameters>();
             func.Should().Throw<MissingMethodException>();
         }
 
