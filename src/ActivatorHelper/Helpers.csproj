@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
+    <AssemblyName>MatrTech.Utilities.Helpers</AssemblyName>
+    <RootNamespace>MatrTech.Utilities.Helpers</RootNamespace>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+
+    <MajorVersion>0</MajorVersion>
+    <MinorVersion>0</MinorVersion>
+    <PatchVersion>1</PatchVersion>
+    <BuildVersion>$([System.DateTime]::Now.ToString("yyMMddHHmm"))</BuildVersion>
+    <Version>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(BuildVersion)</Version>
+
+    <Authors>MatrTech</Authors>
+    <Product>MatrTech.Utilities.Helpers</Product>
+    <Copyright>MatrTech 2021</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl />
+    <RepositoryUrl>https://github.com/matrtech/Utilities.Helpers</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+</Project>
