@@ -3,7 +3,7 @@
 using System.Diagnostics.CodeAnalysis;
 #endif
 
-namespace MatrTech.Utilities.Helpers
+namespace Matr.Utilities.Helpers
 {
     public static class ActivatorHelper
     {
