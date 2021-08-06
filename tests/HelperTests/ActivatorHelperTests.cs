@@ -1,5 +1,5 @@
 using FluentAssertions;
-using MatrTech.Utilities.Helpers;
+using Matr.Utilities.Helpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
