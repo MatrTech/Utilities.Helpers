@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MatrTech.Utilities.Helpers
+namespace Matr.Utilities.Helpers
 {
     public static class ActivatorHelper
     {

@@ -3,7 +3,7 @@ using MatrTech.Utilities.Helpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace ActivatorHelperTests
+namespace Matr.Utilities.Helpers.UnitTests
 {
     [TestClass]
     public class ActivatorHelperTests
