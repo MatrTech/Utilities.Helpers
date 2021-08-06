@@ -17,6 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ActivatorHelper\Helpers.csproj" />
+    <ProjectReference Include="..\..\src\Helpers\Helpers.csproj" />
   </ItemGroup>
 </Project>
