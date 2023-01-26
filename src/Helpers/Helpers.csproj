@@ -3,19 +3,13 @@
   <PropertyGroup>
     <TargetFrameworks>net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
     <AssemblyName>MatrTech.Utilities.Helpers</AssemblyName>
-    <RootNamespace>MatrTech.Utilities.Helpers</RootNamespace>
+    <RootNamespace>Matr.Utilities.Helpers.UnitTests</RootNamespace>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
-
-    <MajorVersion>0</MajorVersion>
-    <MinorVersion>0</MinorVersion>
-    <PatchVersion>1</PatchVersion>
-    <BuildVersion>$([System.DateTime]::Now.ToString("yyMMddHHmm"))</BuildVersion>
-    <Version>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(BuildVersion)</Version>
 
     <Authors>MatrTech</Authors>
     <Product>MatrTech.Utilities.Helpers</Product>
@@ -24,6 +18,16 @@
     <PackageProjectUrl />
     <RepositoryUrl>https://github.com/matrtech/Utilities.Helpers</RepositoryUrl>
   </PropertyGroup>
+
+  <Target Name="SetVersion" BeforeTargets="Build">
+    <PropertyGroup>
+      <MajorVersion>0</MajorVersion>
+      <MinorVersion>0</MinorVersion>
+      <PatchVersion>1</PatchVersion>
+      <BuildVersion  Condition="'$(DesignTimeBuild)' != 'true' OR '$(BuildingProject)' == 'true'">$([System.DateTime]::Now.ToString("HHmmss"))</BuildVersion>
+      <PackageVersion>$(MajorVersion).$(MinorVersion).$(PatchVersion).$(BuildVersion)</PackageVersion>
+    </PropertyGroup>
+  </Target>
 
   <ItemGroup>
     <None Include="..\..\LICENSE">
